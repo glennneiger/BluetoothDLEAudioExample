@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3063F3E71DE44CF00088DD5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063F3E61DE44CF00088DD5C /* AppDelegate.swift */; };
-		3063F3E91DE44CF00088DD5C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063F3E81DE44CF00088DD5C /* ViewController.swift */; };
 		3063F3EC1DE44CF00088DD5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3063F3EA1DE44CF00088DD5C /* Main.storyboard */; };
 		3063F3EE1DE44CF00088DD5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3063F3ED1DE44CF00088DD5C /* Assets.xcassets */; };
 		3063F3F11DE44CF00088DD5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3063F3EF1DE44CF00088DD5C /* LaunchScreen.storyboard */; };
@@ -18,12 +17,13 @@
 		3063F4021DE44D230088DD5C /* sample_4_fire_it_up.bv32 in Resources */ = {isa = PBXBuildFile; fileRef = 3063F3FC1DE44D230088DD5C /* sample_4_fire_it_up.bv32 */; };
 		3063F4031DE44D230088DD5C /* sample_5_pzeyes03.bv32 in Resources */ = {isa = PBXBuildFile; fileRef = 3063F3FD1DE44D230088DD5C /* sample_5_pzeyes03.bv32 */; };
 		3063F4041DE44D230088DD5C /* sample_6_ppwrdown.bv32 in Resources */ = {isa = PBXBuildFile; fileRef = 3063F3FE1DE44D230088DD5C /* sample_6_ppwrdown.bv32 */; };
+		3063F40A1DE454BD0088DD5C /* PeripheralScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063F4091DE454BD0088DD5C /* PeripheralScannerViewController.swift */; };
+		3063F40F1DE459BB0088DD5C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063F40E1DE459BB0088DD5C /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3063F3E31DE44CF00088DD5C /* DLEStreamer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DLEStreamer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3063F3E61DE44CF00088DD5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3063F3E81DE44CF00088DD5C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3063F3EB1DE44CF00088DD5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3063F3ED1DE44CF00088DD5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3063F3F01DE44CF00088DD5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -34,6 +34,8 @@
 		3063F3FC1DE44D230088DD5C /* sample_4_fire_it_up.bv32 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample_4_fire_it_up.bv32; sourceTree = "<group>"; };
 		3063F3FD1DE44D230088DD5C /* sample_5_pzeyes03.bv32 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample_5_pzeyes03.bv32; sourceTree = "<group>"; };
 		3063F3FE1DE44D230088DD5C /* sample_6_ppwrdown.bv32 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample_6_ppwrdown.bv32; sourceTree = "<group>"; };
+		3063F4091DE454BD0088DD5C /* PeripheralScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeripheralScannerViewController.swift; sourceTree = "<group>"; };
+		3063F40E1DE459BB0088DD5C /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,8 +69,8 @@
 		3063F3E51DE44CF00088DD5C /* DLEStreamer */ = {
 			isa = PBXGroup;
 			children = (
+				3063F4051DE450530088DD5C /* ViewControllers */,
 				3063F3E61DE44CF00088DD5C /* AppDelegate.swift */,
-				3063F3E81DE44CF00088DD5C /* ViewController.swift */,
 				3063F3EA1DE44CF00088DD5C /* Main.storyboard */,
 				3063F3ED1DE44CF00088DD5C /* Assets.xcassets */,
 				3063F3EF1DE44CF00088DD5C /* LaunchScreen.storyboard */,
@@ -89,6 +91,31 @@
 			);
 			name = AudioSamples;
 			path = DLEStreamer/AudioSamples;
+			sourceTree = "<group>";
+		};
+		3063F4051DE450530088DD5C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3063F40D1DE459AE0088DD5C /* MainView */,
+				3063F4081DE454BD0088DD5C /* ScannerView */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3063F4081DE454BD0088DD5C /* ScannerView */ = {
+			isa = PBXGroup;
+			children = (
+				3063F4091DE454BD0088DD5C /* PeripheralScannerViewController.swift */,
+			);
+			path = ScannerView;
+			sourceTree = "<group>";
+		};
+		3063F40D1DE459AE0088DD5C /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				3063F40E1DE459BB0088DD5C /* MainViewController.swift */,
+			);
+			path = MainView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,8 +197,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3063F3E91DE44CF00088DD5C /* ViewController.swift in Sources */,
+				3063F40F1DE459BB0088DD5C /* MainViewController.swift in Sources */,
 				3063F3E71DE44CF00088DD5C /* AppDelegate.swift in Sources */,
+				3063F40A1DE454BD0088DD5C /* PeripheralScannerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +324,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P3R8YQEV4L;
 				INFOPLIST_FILE = DLEStreamer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nordicsemi.DLEStreamer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -309,6 +338,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P3R8YQEV4L;
 				INFOPLIST_FILE = DLEStreamer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nordicsemi.DLEStreamer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -335,6 +365,7 @@
 				3063F3F71DE44CF00088DD5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

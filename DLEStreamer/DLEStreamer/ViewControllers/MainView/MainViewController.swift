@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  DLEStreamer
 //
 //  Created by Mostafa Berg on 22/11/2016.
@@ -7,19 +7,22 @@
 //
 
 import UIKit
+import CoreBluetooth
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
+
+    //MARK: - Properties
+    public var peripheral : CBPeripheral!
+    public var centralManager : CBCentralManager!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
-
