@@ -19,6 +19,9 @@
 		3063F4041DE44D230088DD5C /* sample_6_ppwrdown.bv32 in Resources */ = {isa = PBXBuildFile; fileRef = 3063F3FE1DE44D230088DD5C /* sample_6_ppwrdown.bv32 */; };
 		3063F40A1DE454BD0088DD5C /* PeripheralScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063F4091DE454BD0088DD5C /* PeripheralScannerViewController.swift */; };
 		3063F40F1DE459BB0088DD5C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063F40E1DE459BB0088DD5C /* MainViewController.swift */; };
+		30DDBF0B1DEDA3F300456789 /* UARTController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DDBF0A1DEDA3F300456789 /* UARTController.swift */; };
+		30DDBF111DEEC0F800456789 /* FileStreamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DDBF101DEEC0F800456789 /* FileStreamer.swift */; };
+		30DDBF131DEEDF5B00456789 /* FileStreamerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DDBF121DEEDF5B00456789 /* FileStreamerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		3063F3FE1DE44D230088DD5C /* sample_6_ppwrdown.bv32 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample_6_ppwrdown.bv32; sourceTree = "<group>"; };
 		3063F4091DE454BD0088DD5C /* PeripheralScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeripheralScannerViewController.swift; sourceTree = "<group>"; };
 		3063F40E1DE459BB0088DD5C /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		30DDBF0A1DEDA3F300456789 /* UARTController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UARTController.swift; sourceTree = "<group>"; };
+		30DDBF101DEEC0F800456789 /* FileStreamer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileStreamer.swift; sourceTree = "<group>"; };
+		30DDBF121DEEDF5B00456789 /* FileStreamerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileStreamerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,8 +75,10 @@
 		3063F3E51DE44CF00088DD5C /* DLEStreamer */ = {
 			isa = PBXGroup;
 			children = (
-				3063F4051DE450530088DD5C /* ViewControllers */,
+				30DDBF0F1DEEC0E400456789 /* FileStreamer */,
 				3063F3E61DE44CF00088DD5C /* AppDelegate.swift */,
+				30DDBF091DEDA3DD00456789 /* UARTController */,
+				3063F4051DE450530088DD5C /* ViewControllers */,
 				3063F3EA1DE44CF00088DD5C /* Main.storyboard */,
 				3063F3ED1DE44CF00088DD5C /* Assets.xcassets */,
 				3063F3EF1DE44CF00088DD5C /* LaunchScreen.storyboard */,
@@ -96,8 +104,8 @@
 		3063F4051DE450530088DD5C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				3063F40D1DE459AE0088DD5C /* MainView */,
 				3063F4081DE454BD0088DD5C /* ScannerView */,
+				3063F40D1DE459AE0088DD5C /* MainView */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -116,6 +124,23 @@
 				3063F40E1DE459BB0088DD5C /* MainViewController.swift */,
 			);
 			path = MainView;
+			sourceTree = "<group>";
+		};
+		30DDBF091DEDA3DD00456789 /* UARTController */ = {
+			isa = PBXGroup;
+			children = (
+				30DDBF0A1DEDA3F300456789 /* UARTController.swift */,
+			);
+			path = UARTController;
+			sourceTree = "<group>";
+		};
+		30DDBF0F1DEEC0E400456789 /* FileStreamer */ = {
+			isa = PBXGroup;
+			children = (
+				30DDBF101DEEC0F800456789 /* FileStreamer.swift */,
+				30DDBF121DEEDF5B00456789 /* FileStreamerDelegate.swift */,
+			);
+			path = FileStreamer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,7 +224,10 @@
 			files = (
 				3063F40F1DE459BB0088DD5C /* MainViewController.swift in Sources */,
 				3063F3E71DE44CF00088DD5C /* AppDelegate.swift in Sources */,
+				30DDBF111DEEC0F800456789 /* FileStreamer.swift in Sources */,
+				30DDBF131DEEDF5B00456789 /* FileStreamerDelegate.swift in Sources */,
 				3063F40A1DE454BD0088DD5C /* PeripheralScannerViewController.swift in Sources */,
+				30DDBF0B1DEDA3F300456789 /* UARTController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

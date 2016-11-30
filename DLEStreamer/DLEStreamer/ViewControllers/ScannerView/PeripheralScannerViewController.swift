@@ -18,11 +18,12 @@ class PeripheralScannerViewController: UIViewController, CBCentralManagerDelegat
     var discoveredPeripherals = Array<CBPeripheral>()
     
     //MARK: - UI Outlets and actions
-    @IBAction func scanningButtonTapped(_ sender: Any) {
+    @IBAction func scanButtonTapped(_ sender: Any) {
         scanButtonTapAction()
+
     }
 
-    @IBOutlet weak var scanningButton: UIButton!
+    @IBOutlet weak var scanButton: UIBarButtonItem!
     @IBOutlet weak var peripheralTableView: UITableView!
     
     //MARK: - Scanner implementation
@@ -34,14 +35,17 @@ class PeripheralScannerViewController: UIViewController, CBCentralManagerDelegat
     func scanButtonTapAction() {
         if centralManager.isScanning {
             centralManager.stopScan()
-            scanningButton.setTitle("Scan", for: .normal)
+            scanButton.title = "Start"
         }else{
-            centralManager.scanForPeripherals(withServices: nil, options: nil)
-            scanningButton.setTitle("Stop", for: .normal)
+            discoveredPeripherals.removeAll()
+            peripheralTableView.reloadData()
+            centralManager.scanForPeripherals(withServices: [CBUUID(string : uartServiceUUIDString)], options: nil)
+            scanButton.title = "Stop"
         }
     }
     
     func selectedPeripheral(aPeripheral : CBPeripheral) {
+        centralManager.stopScan()
         performSegue(withIdentifier: showMainViewSegueIdentifier, sender: aPeripheral)
     }
     
@@ -52,16 +56,8 @@ class PeripheralScannerViewController: UIViewController, CBCentralManagerDelegat
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        scanningButton.setTitle("Bletooth Off", for: .disabled)
-        scanningButton.isEnabled = false
-    }
-
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
+        scanButton.title = "Bluetooth Off"
+        scanButton.isEnabled = false
     }
     
     //MARK: - UITableViewDelegate
@@ -91,16 +87,16 @@ class PeripheralScannerViewController: UIViewController, CBCentralManagerDelegat
     //MARK: - CBCentralManagerDelegate
     public func centralManagerDidUpdateState(_ central: CBCentralManager){
         if central.state == .poweredOn {
-            scanningButton.isEnabled = true
+            scanButton.isEnabled = true
             
             if centralManager.isScanning {
-                scanningButton.setTitle("Stop", for: .normal)
+                scanButton.title = "Stop"
             }else{
-                scanningButton.setTitle("Scan", for: .normal)
+                scanButton.title = "Scan"
             }
 
         }else{
-            scanningButton.isEnabled = false
+            scanButton.isEnabled = false
         }
     }
 
