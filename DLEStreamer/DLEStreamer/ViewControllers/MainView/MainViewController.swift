@@ -65,7 +65,7 @@ class MainViewController: UIViewController, UITextFieldDelegate,CBCentralManager
     //MARK: - Implementation
     //
     func playButtonTapped() {
-        playButtonTapped()
+        beginStreaming()
     }
     
     func stopButtonTapped() {
@@ -87,14 +87,14 @@ class MainViewController: UIViewController, UITextFieldDelegate,CBCentralManager
         let packetCount = UInt64(packetCountField.text!)
         let interval    = Int(intervalField.text!)
         fileStreamer.stream(withChunkSize: packetCount!, andInterval: interval!)
-        setBluetoothIconVisible(visible: true)
+        updateUIToStreamingState()
     }
     
     func stopStreaming() {
         if fileStreamer != nil {
             fileStreamer.close()
             fileStreamer = nil
-            setBluetoothIconVisible(visible: false)
+            updateUIToStoppedState()
         }
     }
     
@@ -144,7 +144,21 @@ class MainViewController: UIViewController, UITextFieldDelegate,CBCentralManager
     func reachedEOF() {
         fileStreamer.close()
         fileStreamer = nil
+        updateUIToStoppedState()
+    }
+    
+    func updateUIToStreamingState() {
+        setBluetoothIconVisible(visible: true)
+        playButton.isEnabled       = false
+        packetCountField.isEnabled = false
+        intervalField.isEnabled    = false
+    }
+    
+    func updateUIToStoppedState() {
         setBluetoothIconVisible(visible: false)
+        playButton.isEnabled       = true
+        packetCountField.isEnabled = true
+        intervalField.isEnabled    = true
     }
     
     //MARK: - UITextFieldDelegate
