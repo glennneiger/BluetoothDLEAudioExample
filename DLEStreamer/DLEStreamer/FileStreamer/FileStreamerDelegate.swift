@@ -9,6 +9,6 @@
 import UIKit
 
 protocol FileStreamerDelegate {
-    func didReceiveChunk(data : Data)
+    func didReceiveChunk(data : Data, atOffset : UInt64, andTotalSize : UInt64)
     func reachedEOF()
 }

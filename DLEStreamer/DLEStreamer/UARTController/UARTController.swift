@@ -83,7 +83,6 @@ class UARTController: NSObject, CBPeripheralDelegate {
     public func peripheral(_ peripheral: CBPeripheral, didUpdateNotificationStateFor characteristic: CBCharacteristic, error: Error?) {
         if characteristic == txCharacteristic {
             if characteristic.isNotifying == true {
-                print("Enabled TX Notifications")
                 discoveryCallback?()
             }
         }

@@ -40,6 +40,8 @@ class MainViewController: UIViewController, UITextFieldDelegate,CBCentralManager
     @IBOutlet weak var intervalField: UITextField!
     @IBOutlet weak var bleStreamingIcon: UIImageView!
     @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var streamingProgress: UIProgressView!
 
     //MARK: - ViewController methods
     //
@@ -54,12 +56,13 @@ class MainViewController: UIViewController, UITextFieldDelegate,CBCentralManager
         //Load perdefined tracks and set the first one as the target
         tracks = prepareTrackList()
         trackIndex = 0
-        trackTitleLabel.text = tracks[trackIndex]
+        trackTitleLabel.text = "sample_\(trackIndex + 1).bv32"
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         setBluetoothIconVisible(visible: false)
+        self.streamingProgress.setProgress(0, animated: false)
     }
 
     //MARK: - Implementation
@@ -78,7 +81,7 @@ class MainViewController: UIViewController, UITextFieldDelegate,CBCentralManager
             stopStreaming()
             beginStreaming()
         }
-        trackTitleLabel.text = tracks[trackIndex]
+        trackTitleLabel.text = "sample_\(trackIndex + 1).bv32"
     }
     
     func beginStreaming() {
@@ -137,14 +140,19 @@ class MainViewController: UIViewController, UITextFieldDelegate,CBCentralManager
     }
 
     //MARK: - FileStreamerDelegate
-    func didReceiveChunk(data: Data) {
+    func didReceiveChunk(data: Data, atOffset offset: UInt64, andTotalSize totalSize: UInt64) {
         streamChunk(aChunk: data)
+        print(offset, totalSize)
+        let completion = Float(offset) / Float(totalSize)
+        self.streamingProgress.setProgress(completion, animated: true)
     }
 
     func reachedEOF() {
         fileStreamer.close()
         fileStreamer = nil
         updateUIToStoppedState()
+        statusLabel.text = "Completed"
+        self.streamingProgress.setProgress(0, animated: true)
     }
     
     func updateUIToStreamingState() {
@@ -152,6 +160,7 @@ class MainViewController: UIViewController, UITextFieldDelegate,CBCentralManager
         playButton.isEnabled       = false
         packetCountField.isEnabled = false
         intervalField.isEnabled    = false
+        statusLabel.text = "Streaming"
     }
     
     func updateUIToStoppedState() {
@@ -159,6 +168,7 @@ class MainViewController: UIViewController, UITextFieldDelegate,CBCentralManager
         playButton.isEnabled       = true
         packetCountField.isEnabled = true
         intervalField.isEnabled    = true
+        statusLabel.text = "Stopped"
     }
     
     //MARK: - UITextFieldDelegate
@@ -184,13 +194,9 @@ class MainViewController: UIViewController, UITextFieldDelegate,CBCentralManager
     
     func prepareTrackList() -> [String] {
         var tracks = [String]()
-        
-        tracks.append(getResorucePath(withResourceName: "sample_1_1khz")!)
-        tracks.append(getResorucePath(withResourceName: "sample_2_dagsnytt_atten_intro")!)
-        tracks.append(getResorucePath(withResourceName: "sample_3_bbc_news_intro")!)
-        tracks.append(getResorucePath(withResourceName: "sample_5_pzeyes03")!)
-        tracks.append(getResorucePath(withResourceName: "sample_6_ppwrdown")!)
-
+        for i in 1...6 {
+            tracks.append(getResorucePath(withResourceName: "sample_\(i)")!)
+        }
         return tracks
     }
     

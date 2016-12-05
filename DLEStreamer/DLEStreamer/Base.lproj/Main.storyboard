@@ -255,23 +255,46 @@
                                     <outlet property="delegate" destination="M9v-Om-HaW" id="f55-pn-oLW"/>
                                 </connections>
                             </textField>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="jbj-1R-1ik">
+                                <rect key="frame" x="20" y="456" width="374" height="2"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="19d-eC-zq8">
+                                <rect key="frame" x="20" y="427" width="54" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEq-bp-jzB">
+                                <rect key="frame" x="82" y="427" width="312" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="WXv-mx-mte" secondAttribute="bottom" id="0mv-qd-8Bp"/>
                             <constraint firstItem="TnQ-ig-qe2" firstAttribute="top" secondItem="j0N-AA-51e" secondAttribute="bottom" constant="17" id="2IB-Ee-5MB"/>
                             <constraint firstItem="WXv-mx-mte" firstAttribute="top" secondItem="hfH-Vl-DBa" secondAttribute="bottom" id="2IF-6I-tSW"/>
+                            <constraint firstItem="nEq-bp-jzB" firstAttribute="leading" secondItem="19d-eC-zq8" secondAttribute="trailing" constant="8" id="6lc-Lj-O8G"/>
                             <constraint firstItem="Bus-pv-dzK" firstAttribute="leading" secondItem="WXv-mx-mte" secondAttribute="trailing" constant="-187" id="6sF-7h-jDd"/>
                             <constraint firstItem="WXv-mx-mte" firstAttribute="leading" secondItem="rz5-Mz-FQv" secondAttribute="leading" id="8gY-DZ-bQp"/>
                             <constraint firstItem="WXv-mx-mte" firstAttribute="top" secondItem="j0N-AA-51e" secondAttribute="bottom" constant="-54" id="CYd-t2-k03"/>
                             <constraint firstAttribute="trailingMargin" secondItem="b9M-LC-tGN" secondAttribute="trailing" id="CaI-yx-Usk"/>
                             <constraint firstItem="WXv-mx-mte" firstAttribute="leading" secondItem="j0N-AA-51e" secondAttribute="trailing" constant="-140" id="OVl-wF-97P"/>
+                            <constraint firstItem="jbj-1R-1ik" firstAttribute="top" secondItem="nEq-bp-jzB" secondAttribute="bottom" constant="8" id="Qd3-WG-FYg"/>
                             <constraint firstItem="WXv-mx-mte" firstAttribute="leading" secondItem="TnQ-ig-qe2" secondAttribute="trailing" constant="-140" id="Tnf-zM-TlH"/>
                             <constraint firstItem="xhZ-uD-7Zq" firstAttribute="top" secondItem="b9M-LC-tGN" secondAttribute="bottom" constant="20" id="YOg-0D-huv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jbj-1R-1ik" secondAttribute="trailing" id="Zou-Cg-QrQ"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="jbj-1R-1ik" secondAttribute="leading" id="euJ-wt-CXg"/>
+                            <constraint firstItem="b9M-LC-tGN" firstAttribute="top" secondItem="jbj-1R-1ik" secondAttribute="bottom" constant="8" id="f7Q-j0-UkX"/>
                             <constraint firstAttribute="trailing" secondItem="WXv-mx-mte" secondAttribute="trailing" id="fNy-tY-fZx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nEq-bp-jzB" secondAttribute="trailing" id="hme-MG-2t5"/>
                             <constraint firstItem="WXv-mx-mte" firstAttribute="top" secondItem="Bus-pv-dzK" secondAttribute="bottom" constant="-58" id="hw4-je-s7Z"/>
                             <constraint firstAttribute="leadingMargin" secondItem="b9M-LC-tGN" secondAttribute="leading" id="jfj-9L-Bb2"/>
                             <constraint firstItem="fNr-a7-hiZ" firstAttribute="leading" secondItem="WXv-mx-mte" secondAttribute="trailing" constant="-187" id="lL1-V0-NdA"/>
+                            <constraint firstItem="jbj-1R-1ik" firstAttribute="top" secondItem="19d-eC-zq8" secondAttribute="bottom" constant="8" id="w5y-YM-yJg"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="19d-eC-zq8" secondAttribute="leading" id="ykt-Zl-I6B"/>
                             <constraint firstItem="fNr-a7-hiZ" firstAttribute="top" secondItem="Bus-pv-dzK" secondAttribute="bottom" constant="8" id="zcr-BI-eaR"/>
                         </constraints>
                     </view>
@@ -283,12 +306,14 @@
                         <outlet property="intervalField" destination="fNr-a7-hiZ" id="AYW-nH-HSa"/>
                         <outlet property="packetCountField" destination="Bus-pv-dzK" id="Yv7-Kh-wW8"/>
                         <outlet property="playButton" destination="r9t-bM-fjQ" id="F3h-2R-n27"/>
+                        <outlet property="statusLabel" destination="nEq-bp-jzB" id="CNG-Gq-11n"/>
+                        <outlet property="streamingProgress" destination="jbj-1R-1ik" id="5Yt-E9-3bG"/>
                         <outlet property="trackTitleLabel" destination="ft2-Nk-bQ2" id="Hwu-I3-dus"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OkE-s6-3YU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="893.60000000000002" y="232.53373313343329"/>
+            <point key="canvasLocation" x="892.75362318840587" y="232.33695652173915"/>
         </scene>
     </scenes>
     <resources>

@@ -39,23 +39,26 @@ class FileStreamer: NSObject {
     }
 
     func timerEvent() {
-        print("\(cursorPosition)/\(totalSize)")
         if cursorPosition >= totalSize {
             timer?.invalidate()
             timer = nil
             delegate.reachedEOF()
             return
         }
+        
         var data : Data
+        let currentPosition = cursorPosition
+
         if cursorPosition + chunkSize > totalSize {
             let finalChunkSize = totalSize - cursorPosition
             data = readRange(offset: self.cursorPosition, count: finalChunkSize)
             cursorPosition += finalChunkSize
-        }else{
+        } else {
             data = readRange(offset: self.cursorPosition, count: chunkSize)
             cursorPosition += UInt64(chunkSize)
         }
-        delegate.didReceiveChunk(data: data)
+
+        delegate.didReceiveChunk(data: data, atOffset: currentPosition, andTotalSize: totalSize)
     }
     func readRange(offset : UInt64, count : UInt64) -> Data {
         fileHandle.seek(toFileOffset: offset)
