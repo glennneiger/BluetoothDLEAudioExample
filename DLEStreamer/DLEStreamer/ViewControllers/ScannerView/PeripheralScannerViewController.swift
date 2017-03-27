@@ -20,9 +20,11 @@ class PeripheralScannerViewController: UIViewController, CBCentralManagerDelegat
     //MARK: - UI Outlets and actions
     @IBAction func scanButtonTapped(_ sender: Any) {
         scanButtonTapAction()
-
     }
-
+    @IBAction func clearButtonTapped(_ sender: Any) {
+        clearButtonAction()
+    }
+    @IBOutlet weak var noPeripheralsView: UILabel!
     @IBOutlet weak var scanButton: UIBarButtonItem!
     @IBOutlet weak var peripheralTableView: UITableView!
     
@@ -32,14 +34,20 @@ class PeripheralScannerViewController: UIViewController, CBCentralManagerDelegat
         centralManager = CBCentralManager(delegate: self, queue: nil)
     }
     
+    func clearButtonAction() {
+        centralManager.stopScan()
+        scanButton.title = "Scan"
+        discoveredPeripherals.removeAll()
+        peripheralTableView.reloadData()
+        updateEmptyPeripheralView()
+    }
+
     func scanButtonTapAction() {
         if centralManager.isScanning {
             centralManager.stopScan()
-            scanButton.title = "Start"
-        }else{
-            discoveredPeripherals.removeAll()
-            peripheralTableView.reloadData()
-            centralManager.scanForPeripherals(withServices: [CBUUID(string : uartServiceUUIDString)], options: nil)
+            scanButton.title = "Scan"
+        } else {
+            centralManager.scanForPeripherals(withServices: nil/*[CBUUID(string : uartServiceUUIDString)]*/, options: nil)
             scanButton.title = "Stop"
         }
     }
@@ -50,14 +58,10 @@ class PeripheralScannerViewController: UIViewController, CBCentralManagerDelegat
     }
     
     //MARK: - UIViewController methods
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        scanButton.title = "Bluetooth Off"
-        scanButton.isEnabled = false
+        super.viewWillAppear(animated)
+        self.centralManager.delegate = self
+        self.updateStartButtonState(withCentralManager: self.centralManager)
     }
     
     //MARK: - UITableViewDelegate
@@ -73,19 +77,23 @@ class PeripheralScannerViewController: UIViewController, CBCentralManagerDelegat
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let tableCell = tableView.dequeueReusableCell(withIdentifier: "peripheralCell")
+        let tableCell = tableView.dequeueReusableCell(withIdentifier: "peripheralCell", for: indexPath)
         let peripheralName = discoveredPeripherals[indexPath.row].name
         if peripheralName != nil {
-            tableCell?.textLabel?.text = peripheralName!
+            tableCell.textLabel?.text = peripheralName!
         }else{
-            tableCell?.textLabel?.text = "No name"
+            tableCell.textLabel?.text = "No name"
         }
-        
-        return tableCell!
+
+        return tableCell
     }
     
     //MARK: - CBCentralManagerDelegate
     public func centralManagerDidUpdateState(_ central: CBCentralManager){
+        self.updateStartButtonState(withCentralManager: central)
+    }
+    
+    func updateStartButtonState(withCentralManager central: CBCentralManager) {
         if central.state == .poweredOn {
             scanButton.isEnabled = true
             
@@ -94,17 +102,32 @@ class PeripheralScannerViewController: UIViewController, CBCentralManagerDelegat
             }else{
                 scanButton.title = "Scan"
             }
-
+            
         }else{
             scanButton.isEnabled = false
         }
+        
     }
-
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
-        discoveredPeripherals.append(peripheral)
-        peripheralTableView.reloadData()
+        if discoveredPeripherals.contains(peripheral) == false {
+            discoveredPeripherals.append(peripheral)
+            updateEmptyPeripheralView()
+            peripheralTableView.reloadData()
+        }
     }
     
+    func updateEmptyPeripheralView() {
+        if discoveredPeripherals.count > 0 {
+            UIView.animate(withDuration: 0.3, animations: {
+                self.noPeripheralsView.alpha = 0
+            })
+        } else {
+            UIView.animate(withDuration: 0.3, animations: {
+                self.noPeripheralsView.alpha = 1
+            })
+        }
+    }
+
     //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == showMainViewSegueIdentifier {

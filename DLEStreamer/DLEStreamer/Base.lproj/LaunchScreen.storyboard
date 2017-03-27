@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Xek-s9-EU4">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,38 +19,48 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="zxC-Wy-ElQ">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nordic_logo" translatesAutoresizingMaskIntoConstraints="NO" id="DiT-Zr-bTF">
-                                <rect key="frame" x="16" y="28" width="343" height="315"/>
+                                <rect key="frame" x="97" y="181" width="181" height="241"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="DiT-Zr-bTF" secondAttribute="height" multiplier="49:45" id="sbc-jc-Adu"/>
+                                    <constraint firstAttribute="width" secondItem="DiT-Zr-bTF" secondAttribute="height" multiplier="181:241" id="fMc-oA-IW6"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="DiT-Zr-bTF" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailingMargin" id="8TA-VI-2dI"/>
-                            <constraint firstItem="zxC-Wy-ElQ" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="J5O-eV-KfH"/>
-                            <constraint firstAttribute="trailing" secondItem="zxC-Wy-ElQ" secondAttribute="trailing" id="LmL-0i-QOa"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="zxC-Wy-ElQ" secondAttribute="bottom" id="OGi-hC-0j3"/>
-                            <constraint firstItem="zxC-Wy-ElQ" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="cPv-za-Nh6"/>
-                            <constraint firstItem="DiT-Zr-bTF" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="8" id="gLT-mp-kSn"/>
-                            <constraint firstItem="DiT-Zr-bTF" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="odI-cq-p2g"/>
+                            <constraint firstItem="DiT-Zr-bTF" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="0Ww-nj-2Bw"/>
+                            <constraint firstItem="DiT-Zr-bTF" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="2LM-Zd-L36"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="igS-5R-ELN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7QU-WC-TQA">
+            <objects>
+                <navigationController id="Xek-s9-EU4" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="vIz-At-YO3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.50196078430000002" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="01J-lp-oVM" kind="relationship" relationship="rootViewController" id="sj0-u7-ZL0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6IY-sm-OZc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-759" y="375"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="BackgroundImage" width="768" height="1024"/>
         <image name="nordic_logo" width="181" height="241"/>
     </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

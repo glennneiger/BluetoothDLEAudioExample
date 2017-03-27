@@ -19,7 +19,7 @@ class MainViewController: UIViewController, UITextFieldDelegate,CBCentralManager
     private var fileStreamer   : FileStreamer!
     private var trackIndex     : Int = 0
     private var tracks         : [String]!
-
+    
     @IBAction func stopButtonTapped(_ sender: Any) {
         stopButtonTapped()
     }
@@ -45,6 +45,7 @@ class MainViewController: UIViewController, UITextFieldDelegate,CBCentralManager
 
     //MARK: - ViewController methods
     //
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         centralManager.delegate = self
@@ -65,6 +66,11 @@ class MainViewController: UIViewController, UITextFieldDelegate,CBCentralManager
         self.streamingProgress.setProgress(0, animated: false)
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        //Disconnect when leaving view
+        centralManager.cancelPeripheralConnection(peripheral)
+        peripheral = nil
+    }
     //MARK: - Implementation
     //
     func playButtonTapped() {
@@ -194,7 +200,7 @@ class MainViewController: UIViewController, UITextFieldDelegate,CBCentralManager
     
     func prepareTrackList() -> [String] {
         var tracks = [String]()
-        for i in 1...6 {
+        for i in 1...21 {
             tracks.append(getResorucePath(withResourceName: "sample_\(i)")!)
         }
         return tracks

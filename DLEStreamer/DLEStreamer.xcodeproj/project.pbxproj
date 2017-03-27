@@ -7,16 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		303547F61E88F7EB00C12991 /* sample_21.bv32 in Resources */ = {isa = PBXBuildFile; fileRef = 303547E11E88F7EB00C12991 /* sample_21.bv32 */; };
+		303547F71E88F7EB00C12991 /* sample_20.bv32 in Resources */ = {isa = PBXBuildFile; fileRef = 303547E21E88F7EB00C12991 /* sample_20.bv32 */; };
+		303547F81E88F7EB00C12991 /* sample_19.bv32 in Resources */ = {isa = PBXBuildFile; fileRef = 303547E31E88F7EB00C12991 /* sample_19.bv32 */; };
+		303547F91E88F7EB00C12991 /* sample_18.bv32 in Resources */ = {isa = PBXBuildFile; fileRef = 303547E41E88F7EB00C12991 /* sample_18.bv32 */; };
+		303547FA1E88F7EB00C12991 /* sample_17.bv32 in Resources */ = {isa = PBXBuildFile; fileRef = 303547E51E88F7EB00C12991 /* sample_17.bv32 */; };
+		303547FB1E88F7EB00C12991 /* sample_16.bv32 in Resources */ = {isa = PBXBuildFile; fileRef = 303547E61E88F7EB00C12991 /* sample_16.bv32 */; };
+		303547FC1E88F7EB00C12991 /* sample_15.bv32 in Resources */ = {isa = PBXBuildFile; fileRef = 303547E71E88F7EB00C12991 /* sample_15.bv32 */; };
+		303547FD1E88F7EB00C12991 /* sample_14.bv32 in Resources */ = {isa = PBXBuildFile; fileRef = 303547E81E88F7EB00C12991 /* sample_14.bv32 */; };
+		303547FE1E88F7EB00C12991 /* sample_13.bv32 in Resources */ = {isa = PBXBuildFile; fileRef = 303547E91E88F7EB00C12991 /* sample_13.bv32 */; };
+		303547FF1E88F7EB00C12991 /* sample_12.bv32 in Resources */ = {isa = PBXBuildFile; fileRef = 303547EA1E88F7EB00C12991 /* sample_12.bv32 */; };
+		303548001E88F7EB00C12991 /* sample_11.bv32 in Resources */ = {isa = PBXBuildFile; fileRef = 303547EB1E88F7EB00C12991 /* sample_11.bv32 */; };
+		303548011E88F7EB00C12991 /* sample_10.bv32 in Resources */ = {isa = PBXBuildFile; fileRef = 303547EC1E88F7EB00C12991 /* sample_10.bv32 */; };
+		303548021E88F7EB00C12991 /* sample_9.bv32 in Resources */ = {isa = PBXBuildFile; fileRef = 303547ED1E88F7EB00C12991 /* sample_9.bv32 */; };
+		303548031E88F7EB00C12991 /* sample_8.bv32 in Resources */ = {isa = PBXBuildFile; fileRef = 303547EE1E88F7EB00C12991 /* sample_8.bv32 */; };
+		303548041E88F7EB00C12991 /* sample_7.bv32 in Resources */ = {isa = PBXBuildFile; fileRef = 303547EF1E88F7EB00C12991 /* sample_7.bv32 */; };
+		303548051E88F7EB00C12991 /* sample_6.bv32 in Resources */ = {isa = PBXBuildFile; fileRef = 303547F01E88F7EB00C12991 /* sample_6.bv32 */; };
+		303548061E88F7EB00C12991 /* sample_5.bv32 in Resources */ = {isa = PBXBuildFile; fileRef = 303547F11E88F7EB00C12991 /* sample_5.bv32 */; };
+		303548071E88F7EB00C12991 /* sample_4.bv32 in Resources */ = {isa = PBXBuildFile; fileRef = 303547F21E88F7EB00C12991 /* sample_4.bv32 */; };
+		303548081E88F7EB00C12991 /* sample_3.bv32 in Resources */ = {isa = PBXBuildFile; fileRef = 303547F31E88F7EB00C12991 /* sample_3.bv32 */; };
+		303548091E88F7EB00C12991 /* sample_2.bv32 in Resources */ = {isa = PBXBuildFile; fileRef = 303547F41E88F7EB00C12991 /* sample_2.bv32 */; };
+		3035480A1E88F7EB00C12991 /* sample_1.bv32 in Resources */ = {isa = PBXBuildFile; fileRef = 303547F51E88F7EB00C12991 /* sample_1.bv32 */; };
 		3063F3E71DE44CF00088DD5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063F3E61DE44CF00088DD5C /* AppDelegate.swift */; };
 		3063F3EC1DE44CF00088DD5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3063F3EA1DE44CF00088DD5C /* Main.storyboard */; };
 		3063F3EE1DE44CF00088DD5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3063F3ED1DE44CF00088DD5C /* Assets.xcassets */; };
 		3063F3F11DE44CF00088DD5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3063F3EF1DE44CF00088DD5C /* LaunchScreen.storyboard */; };
-		3063F3FF1DE44D230088DD5C /* sample_1.bv32 in Resources */ = {isa = PBXBuildFile; fileRef = 3063F3F91DE44D230088DD5C /* sample_1.bv32 */; };
-		3063F4001DE44D230088DD5C /* sample_2.bv32 in Resources */ = {isa = PBXBuildFile; fileRef = 3063F3FA1DE44D230088DD5C /* sample_2.bv32 */; };
-		3063F4011DE44D230088DD5C /* sample_3.bv32 in Resources */ = {isa = PBXBuildFile; fileRef = 3063F3FB1DE44D230088DD5C /* sample_3.bv32 */; };
-		3063F4021DE44D230088DD5C /* sample_4.bv32 in Resources */ = {isa = PBXBuildFile; fileRef = 3063F3FC1DE44D230088DD5C /* sample_4.bv32 */; };
-		3063F4031DE44D230088DD5C /* sample_5.bv32 in Resources */ = {isa = PBXBuildFile; fileRef = 3063F3FD1DE44D230088DD5C /* sample_5.bv32 */; };
-		3063F4041DE44D230088DD5C /* sample_6.bv32 in Resources */ = {isa = PBXBuildFile; fileRef = 3063F3FE1DE44D230088DD5C /* sample_6.bv32 */; };
 		3063F40A1DE454BD0088DD5C /* PeripheralScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063F4091DE454BD0088DD5C /* PeripheralScannerViewController.swift */; };
 		3063F40F1DE459BB0088DD5C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063F40E1DE459BB0088DD5C /* MainViewController.swift */; };
 		30DDBF0B1DEDA3F300456789 /* UARTController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DDBF0A1DEDA3F300456789 /* UARTController.swift */; };
@@ -25,18 +40,33 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		303547E11E88F7EB00C12991 /* sample_21.bv32 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sample_21.bv32; sourceTree = "<group>"; };
+		303547E21E88F7EB00C12991 /* sample_20.bv32 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample_20.bv32; sourceTree = "<group>"; };
+		303547E31E88F7EB00C12991 /* sample_19.bv32 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample_19.bv32; sourceTree = "<group>"; };
+		303547E41E88F7EB00C12991 /* sample_18.bv32 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample_18.bv32; sourceTree = "<group>"; };
+		303547E51E88F7EB00C12991 /* sample_17.bv32 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample_17.bv32; sourceTree = "<group>"; };
+		303547E61E88F7EB00C12991 /* sample_16.bv32 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample_16.bv32; sourceTree = "<group>"; };
+		303547E71E88F7EB00C12991 /* sample_15.bv32 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample_15.bv32; sourceTree = "<group>"; };
+		303547E81E88F7EB00C12991 /* sample_14.bv32 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample_14.bv32; sourceTree = "<group>"; };
+		303547E91E88F7EB00C12991 /* sample_13.bv32 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample_13.bv32; sourceTree = "<group>"; };
+		303547EA1E88F7EB00C12991 /* sample_12.bv32 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample_12.bv32; sourceTree = "<group>"; };
+		303547EB1E88F7EB00C12991 /* sample_11.bv32 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample_11.bv32; sourceTree = "<group>"; };
+		303547EC1E88F7EB00C12991 /* sample_10.bv32 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample_10.bv32; sourceTree = "<group>"; };
+		303547ED1E88F7EB00C12991 /* sample_9.bv32 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample_9.bv32; sourceTree = "<group>"; };
+		303547EE1E88F7EB00C12991 /* sample_8.bv32 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample_8.bv32; sourceTree = "<group>"; };
+		303547EF1E88F7EB00C12991 /* sample_7.bv32 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample_7.bv32; sourceTree = "<group>"; };
+		303547F01E88F7EB00C12991 /* sample_6.bv32 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample_6.bv32; sourceTree = "<group>"; };
+		303547F11E88F7EB00C12991 /* sample_5.bv32 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample_5.bv32; sourceTree = "<group>"; };
+		303547F21E88F7EB00C12991 /* sample_4.bv32 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample_4.bv32; sourceTree = "<group>"; };
+		303547F31E88F7EB00C12991 /* sample_3.bv32 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample_3.bv32; sourceTree = "<group>"; };
+		303547F41E88F7EB00C12991 /* sample_2.bv32 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample_2.bv32; sourceTree = "<group>"; };
+		303547F51E88F7EB00C12991 /* sample_1.bv32 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample_1.bv32; sourceTree = "<group>"; };
 		3063F3E31DE44CF00088DD5C /* DLEStreamer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DLEStreamer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3063F3E61DE44CF00088DD5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3063F3EB1DE44CF00088DD5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3063F3ED1DE44CF00088DD5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3063F3F01DE44CF00088DD5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3063F3F21DE44CF00088DD5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3063F3F91DE44D230088DD5C /* sample_1.bv32 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample_1.bv32; sourceTree = "<group>"; };
-		3063F3FA1DE44D230088DD5C /* sample_2.bv32 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample_2.bv32; sourceTree = "<group>"; };
-		3063F3FB1DE44D230088DD5C /* sample_3.bv32 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample_3.bv32; sourceTree = "<group>"; };
-		3063F3FC1DE44D230088DD5C /* sample_4.bv32 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample_4.bv32; sourceTree = "<group>"; };
-		3063F3FD1DE44D230088DD5C /* sample_5.bv32 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample_5.bv32; sourceTree = "<group>"; };
-		3063F3FE1DE44D230088DD5C /* sample_6.bv32 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample_6.bv32; sourceTree = "<group>"; };
 		3063F4091DE454BD0088DD5C /* PeripheralScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeripheralScannerViewController.swift; sourceTree = "<group>"; };
 		3063F40E1DE459BB0088DD5C /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		30DDBF0A1DEDA3F300456789 /* UARTController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UARTController.swift; sourceTree = "<group>"; };
@@ -90,12 +120,27 @@
 		3063F3F81DE44D230088DD5C /* AudioSamples */ = {
 			isa = PBXGroup;
 			children = (
-				3063F3F91DE44D230088DD5C /* sample_1.bv32 */,
-				3063F3FA1DE44D230088DD5C /* sample_2.bv32 */,
-				3063F3FB1DE44D230088DD5C /* sample_3.bv32 */,
-				3063F3FC1DE44D230088DD5C /* sample_4.bv32 */,
-				3063F3FD1DE44D230088DD5C /* sample_5.bv32 */,
-				3063F3FE1DE44D230088DD5C /* sample_6.bv32 */,
+				303547E11E88F7EB00C12991 /* sample_21.bv32 */,
+				303547E21E88F7EB00C12991 /* sample_20.bv32 */,
+				303547E31E88F7EB00C12991 /* sample_19.bv32 */,
+				303547E41E88F7EB00C12991 /* sample_18.bv32 */,
+				303547E51E88F7EB00C12991 /* sample_17.bv32 */,
+				303547E61E88F7EB00C12991 /* sample_16.bv32 */,
+				303547E71E88F7EB00C12991 /* sample_15.bv32 */,
+				303547E81E88F7EB00C12991 /* sample_14.bv32 */,
+				303547E91E88F7EB00C12991 /* sample_13.bv32 */,
+				303547EA1E88F7EB00C12991 /* sample_12.bv32 */,
+				303547EB1E88F7EB00C12991 /* sample_11.bv32 */,
+				303547EC1E88F7EB00C12991 /* sample_10.bv32 */,
+				303547ED1E88F7EB00C12991 /* sample_9.bv32 */,
+				303547EE1E88F7EB00C12991 /* sample_8.bv32 */,
+				303547EF1E88F7EB00C12991 /* sample_7.bv32 */,
+				303547F01E88F7EB00C12991 /* sample_6.bv32 */,
+				303547F11E88F7EB00C12991 /* sample_5.bv32 */,
+				303547F21E88F7EB00C12991 /* sample_4.bv32 */,
+				303547F31E88F7EB00C12991 /* sample_3.bv32 */,
+				303547F41E88F7EB00C12991 /* sample_2.bv32 */,
+				303547F51E88F7EB00C12991 /* sample_1.bv32 */,
 			);
 			name = AudioSamples;
 			path = DLEStreamer/AudioSamples;
@@ -170,7 +215,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Nordic Semiconductor ASA";
 				TargetAttributes = {
 					3063F3E21DE44CF00088DD5C = {
@@ -203,15 +248,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3063F4021DE44D230088DD5C /* sample_4.bv32 in Resources */,
-				3063F4031DE44D230088DD5C /* sample_5.bv32 in Resources */,
-				3063F4011DE44D230088DD5C /* sample_3.bv32 in Resources */,
-				3063F3FF1DE44D230088DD5C /* sample_1.bv32 in Resources */,
-				3063F4041DE44D230088DD5C /* sample_6.bv32 in Resources */,
+				303548041E88F7EB00C12991 /* sample_7.bv32 in Resources */,
+				303547FF1E88F7EB00C12991 /* sample_12.bv32 in Resources */,
 				3063F3F11DE44CF00088DD5C /* LaunchScreen.storyboard in Resources */,
-				3063F4001DE44D230088DD5C /* sample_2.bv32 in Resources */,
+				303548071E88F7EB00C12991 /* sample_4.bv32 in Resources */,
+				303548051E88F7EB00C12991 /* sample_6.bv32 in Resources */,
+				303548021E88F7EB00C12991 /* sample_9.bv32 in Resources */,
+				303548091E88F7EB00C12991 /* sample_2.bv32 in Resources */,
+				303548011E88F7EB00C12991 /* sample_10.bv32 in Resources */,
+				303547FD1E88F7EB00C12991 /* sample_14.bv32 in Resources */,
+				303547FE1E88F7EB00C12991 /* sample_13.bv32 in Resources */,
+				303548031E88F7EB00C12991 /* sample_8.bv32 in Resources */,
+				303548081E88F7EB00C12991 /* sample_3.bv32 in Resources */,
+				303547F61E88F7EB00C12991 /* sample_21.bv32 in Resources */,
+				303548061E88F7EB00C12991 /* sample_5.bv32 in Resources */,
+				303547FC1E88F7EB00C12991 /* sample_15.bv32 in Resources */,
+				303548001E88F7EB00C12991 /* sample_11.bv32 in Resources */,
+				303547FA1E88F7EB00C12991 /* sample_17.bv32 in Resources */,
+				303547F81E88F7EB00C12991 /* sample_19.bv32 in Resources */,
+				3035480A1E88F7EB00C12991 /* sample_1.bv32 in Resources */,
+				303547F71E88F7EB00C12991 /* sample_20.bv32 in Resources */,
+				303547FB1E88F7EB00C12991 /* sample_16.bv32 in Resources */,
 				3063F3EE1DE44CF00088DD5C /* Assets.xcassets in Resources */,
 				3063F3EC1DE44CF00088DD5C /* Main.storyboard in Resources */,
+				303547F91E88F7EB00C12991 /* sample_18.bv32 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +331,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -321,6 +382,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
