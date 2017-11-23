@@ -50,7 +50,12 @@ class MainViewController: UIViewController, UITextFieldDelegate,CBCentralManager
         super.viewDidLoad()
         centralManager.delegate = self
         centralManager.connect(peripheral, options: nil)
-        self.title = peripheral.name!
+        if let name = peripheral.name {
+            self.title = name
+        } else {
+            self.title = "Peripheral"
+        }
+        
         packetCountField.returnKeyType = .next
         intervalField.returnKeyType = .done
         
@@ -125,7 +130,11 @@ class MainViewController: UIViewController, UITextFieldDelegate,CBCentralManager
     }
 
     func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
-        print("Disconnected from \(peripheral.name)")
+        if let aName = peripheral.name {
+            print("Disconnected from \(aName)")
+        } else {
+            print("Disconnected from peripheral")
+        }
     }
 
     public func centralManagerDidUpdateState(_ central: CBCentralManager) {

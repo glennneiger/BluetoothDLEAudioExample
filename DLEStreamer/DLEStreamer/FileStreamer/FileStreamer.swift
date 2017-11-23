@@ -38,7 +38,7 @@ class FileStreamer: NSObject {
         timer = Timer.scheduledTimer(timeInterval: Double(anInterval)/1000.0, target: self, selector: #selector(FileStreamer.timerEvent), userInfo: nil, repeats: true)
     }
 
-    func timerEvent() {
+    @objc func timerEvent() {
         if cursorPosition >= totalSize {
             timer?.invalidate()
             timer = nil

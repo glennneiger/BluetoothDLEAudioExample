@@ -18,7 +18,7 @@ class UARTController: NSObject, CBPeripheralDelegate {
     
     //MARK: - Porperties
     private var targetPeripheral  : CBPeripheral!
-    private var discoveryCallback : ((Void)->(Void))?
+    private var discoveryCallback : (()->(Void))?
     private var txCharacteristic  : CBCharacteristic?
     private var rxCharacteristic  : CBCharacteristic?
 
@@ -29,12 +29,16 @@ class UARTController: NSObject, CBPeripheralDelegate {
         targetPeripheral.delegate = self
     }
     
-    public func discoverUARTService(withCompletion : @escaping (Void)->(Void)) {
+    public func discoverUARTService(withCompletion : @escaping ()->(Void)) {
         discoveryCallback = withCompletion
         targetPeripheral.discoverServices([CBUUID(string: uartServiceUUIDString)])
     }
 
     public func stream(data : Data) {
+        guard rxCharacteristic != nil else {
+            print("rx characteristic not found")
+            return
+        }
         targetPeripheral.writeValue(data, for: rxCharacteristic!, type: .withoutResponse)
     }
 
